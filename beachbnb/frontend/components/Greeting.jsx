@@ -1,20 +1,25 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-const Greeting = ({ currentUser, logout, openModal }) => { //revisit
+const Greeting = ({ currentUser, logout, openModal, login }) => { //revisit
+
+  const demoLogin = () => {
+    const user = {email: "password@password.com", password: "password"};
+    login(user);
+  }
+
   return (
-    <div>
-      greeting component
+    <div className="greeting">
+      <button className="session-button" id="logo-text" onClick={() => console.log("this should take me home")}>beachbnb</button>
       {currentUser ? (
         <div>
-          Welcome {currentUser.email}!
           <br />
-          <button onClick={logout}>Logout</button>
+          <button onClick={logout} className="session-button">Logout</button>
         </div>
       ) : (
         <div>
-            <button onClick={() => openModal('login')}>Login</button>
-            <button onClick={() => openModal('signup')}>Signup</button>
+            <button className="session-button" onClick={() => demoLogin()}>Demo</button>
+            <button className="session-button" onClick={() => openModal('login')}>Log in</button>
+            <button className="session-button" onClick={() => openModal('signup')}>Sign up</button>
         </div>
       )}
     </div>

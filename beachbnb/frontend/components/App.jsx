@@ -10,7 +10,6 @@ const App = () => (
   <div>
     <Modal />
     <header>
-      <h1>Beach BnB</h1>
       <GreetingContainer />
     </header>
 {/* 

@@ -5,12 +5,75 @@
   right: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.7);
+  padding: 1.875rem 1rem; /*revisit, adjust for airbnb   */
   z-index: 10;
 }
 
-.modal-child {
+/* .modal-content {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 50%; ff385c
   transform: translate(-50%, -50%);
+} */
+
+.modal-content {
+  display: flex;
+  justify-content: center;
+  font-family: 'Raleway', sans-serif;
+  align-items: center;
+  position: absolute;
+  background: #FFF;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  border-radius: 5px;
+  padding-left: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  transform: translate(-50%, -50%);
+}
+
+.session-form input { /*revisit, adjust for airbnb */
+  width: 530px;
+  padding: 15px 15px 15px 15px;
+  margin-top: 10px;
+  border: 1px solid #d8d9db;
+  border-radius: 5px;
+}
+
+.greeting {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+}
+
+.session-button {
+  cursor: pointer;
+  font-family: 'Raleway', sans-serif;
+  margin: 0, 10px;
+  padding-left: 16px;
+  padding-right: 18px;
+  font-weight: 400;
+  height: 34px;
+  width: 60px;
+  border-radius: 0.1875rem;
+}
+
+#logo-text {
+  font-weight: 700;
+  color:#FF385C;
+  font-size: 18px;
+}
+
+.session-submit {
+  text-align: center;
+  font-size: 16px;
+  background-color: #FF385C;
+  border: 1px solid rgb(184, 34, 45);
+  color: #FFF
+}
+
+.session-submit:hover {
+  background-color: #fa4c6c;
+  border: 1px solid rgb(184, 34, 45)
 }

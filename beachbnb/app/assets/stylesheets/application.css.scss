@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+.main {
+   margin: 0 auto;
+   height: 100%;
+   font-family: 'Raleway', sans-serif;
+   background-color: transparent;
+   -webkit-font-smoothing: antialiased;
+}

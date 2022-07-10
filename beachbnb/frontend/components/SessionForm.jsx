@@ -16,9 +16,20 @@ class SessionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log("props", this.props)
     const user = Object.assign({}, this.state);
-    this.props.processForm(user).then(this.props.closeModal());
+    this.props.processForm(user).then(() => this.props.closeModal())
+  }
+
+  renderErrors() {
+    return (
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
   }
 
   update(field) {
@@ -31,9 +42,10 @@ class SessionForm extends React.Component {
 
     const loginForm = () => {
       return (
-        <form onSubmit={this.handleSubmit}>
-          Login Form
-          <input type="text" 
+        <form onSubmit={this.handleSubmit} className="session-form">
+          Log in
+          <br />
+          <input type="text"  //revisit: change to email?
             value={this.state.email}
             onChange={this.update("email")}
             placeholder="Email"
@@ -43,15 +55,17 @@ class SessionForm extends React.Component {
             onChange={this.update("password")}
             placeholder="Password"
           />
-          <input type="submit" value="Sign In" />
+          <input type="submit" className="session-submit" value="Continue" />
+          {this.renderErrors()}
         </form>
       )
     }
 
     const signupForm = () => {
       return (
-        <form onSubmit={this.handleSubmit}>
-          Signup Form
+        <form onSubmit={this.handleSubmit} className="session-form">
+          Sign up
+          <br />
           <input type="text"
             value={this.state.first_name}
             onChange={this.update("first_name")}
@@ -72,7 +86,8 @@ class SessionForm extends React.Component {
             onChange={this.update("password")}
             placeholder="Password"
           />
-          <input type="submit" value="Sign In" />
+          <input type="submit" className="session-submit" value="Continue" />
+          {this.renderErrors()}
         </form>
       )
     }
