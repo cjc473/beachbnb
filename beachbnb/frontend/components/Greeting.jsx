@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Greeting = ({ currentUser, logout }) => { //revisit
+const Greeting = ({ currentUser, logout, openModal }) => { //revisit
   return (
     <div>
       greeting component
@@ -13,8 +13,8 @@ const Greeting = ({ currentUser, logout }) => { //revisit
         </div>
       ) : (
         <div>
-          <Link to="/signup">Signup</Link>
-          <Link to="/login">Login</Link>
+            <button onClick={() => openModal('login')}>Login</button>
+            <button onClick={() => openModal('signup')}>Signup</button>
         </div>
       )}
     </div>
