@@ -9,7 +9,7 @@ const Greeting = ({ currentUser, logout, openModal, login }) => { //revisit
 
   return (
     <div className="greeting">
-      <button className="session-button" id="logo-text" onClick={() => console.log("this should take me home")}>beachbnb</button>
+      <button className="session-button" id="logo-text" onClick={() => {}}>beachbnb</button>
       {currentUser ? (
         <div>
           <br />
