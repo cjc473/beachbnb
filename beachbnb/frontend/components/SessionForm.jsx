@@ -38,6 +38,10 @@ class SessionForm extends React.Component {
     )
   }
 
+  // componentWillUnmount() {
+  //   this.props.removeSessionErrors();
+  // }
+
   render() {
 
     const loginForm = () => {

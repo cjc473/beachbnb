@@ -23,8 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const root = document.getElementById("root");
-  // ReactDOM.render(<Root store={store} />, root);
-  ReactDOM.render(<h1>testing heroku</h1>, root);
+  ReactDOM.render(<Root store={store} />, root);
+  // ReactDOM.render(<h1>testing heroku</h1>, root);
 
 
   //testing
